@@ -1,0 +1,351 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root{
+--orange:#ffa500;
+}
+
+
+*{
+	font-family: 'Nunito', sans-serif;
+	margin:0; padding:0;
+	box-sizing: border-box;
+	text-transform: capitalize;
+	outline: none; border:none;
+	text-decoration: none;
+	transition: all .2s linear;
+}
+
+*::selection{
+	background:var(--orange);
+	color:#fff;
+}
+
+html{
+	font-size: 62.5%;
+	overflow-x: hidden;
+	scroll-padding-top: 6rem;
+	scroll-behavior: smooth;
+}
+
+section{
+	padding: 2rem 9%;
+}
+
+.heading{
+	text-align: center;
+	padding:2.5rem 0
+}
+
+.heading span{
+	font-size: 3.5rem;
+	background: rgba(255,165,0,.2);
+	color:var(--orange);
+	border-radius: .5rem;
+	padding: .2rem 1rem;
+}
+
+.heading span.space{
+	background:none;
+}
+
+/*armamos el boton de inicio de sesion*/
+.btn{
+	display: inline-block;
+	margin-top: 1rem;
+	background:var(--orange);
+	color:#fff;
+	padding:.8rem 3rem;
+	border:.2rem solid var(--orange);
+	cursor: pointer;
+	font-size:1.7rem;
+}
+
+/*el boton de inicio de sesion se hace transparente al poner el cursor encima*/
+.btn:hover{
+	background:rgba(255, 165,0,.2);
+	color:var(--orange);
+}
+
+header{
+	position: fixed;
+	top:0; left: 0; right: 0;
+	background: #333;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 2rem 9%;
+}
+
+header .logo{
+	font-size: 2.5rem;
+	font-weight: bolder;
+	color:#fff;
+	text-transform: uppercase;
+}
+
+header .logo span{
+	color: var(--orange);
+}
+
+header .icons i{
+	font-size: 2.5rem;
+	color:#fff;
+	cursor: pointer;
+	margin-right: 2rem;
+}
+
+header .icons i:hover{
+	color:var(--orange);
+}
+/*contenedor del login*/
+.login-form-container{
+	position: fixed;
+	top:-120%; left: 0;
+	z-index: 10000;
+	min-height: 100vh;
+	width:100%;
+	background: rgba(0,0,0,.7);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+/*para el script del login*/
+.login-form-container.active{
+	top:0;
+}
+
+.login-form-container form{
+	margin:2rem;
+	padding:1.5rem 2rem;
+	border-radius: .5rem;
+	background:#fff;
+	width:50rem;
+}
+
+.login-form-container form h3{
+	font-size: 3rem;
+	color: #444;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 1rem 0;	
+}
+/* con esto le damos forma a la caja contenedora de los campos del login*/
+.login-form-container form .box{
+	width: 100%;
+	padding: 1rem;
+	font-size: 1.7rem;
+	color:#333;
+	margin:.6rem 0;
+	border:.1rem solid rgba(0,0,0,.3);
+	text-transform: none;
+}
+
+/*con esto hacemos que al seleccionar un campo del login los bordes se pongan naranja*/
+.login-form-container form .box:focus{
+	border-color: var(--orange);;
+}
+
+.login-form-container form label{
+	font-size: 1.5rem;
+}
+/*el boton del login ocupa todo el espacio*/
+.login-form-container form .btn{
+	display: block;
+	width: 100%;
+}
+
+/*estilo boton de cerrar*/
+.login-form-container #form-close{
+	position: absolute;
+	top:2rem; right:3rem;
+	font-size: 5rem;
+	color:#fff;
+	cursor: pointer;
+}
+
+.home{
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column;
+	position: relative;
+	z-index: 0;
+}
+
+.home .content{
+	text-align: center;
+}
+
+/*estilo home titulo h3*/
+.home .content h3{
+	font-size: 4.5rem;
+	color:#fff;
+	text-transform: uppercase;
+	text-shadow: 0 .3rem .5rem rgba(0,0,0,.1);
+}
+/*estilo home titulo p*/
+.home .content p{
+	font-size: 2.5rem;
+	color:#fff;
+	padding: .5rem 0;
+
+}
+
+/*contenedor del video*/
+.home .video-container video{
+	position: absolute;
+	top:0; left: 0;
+	z-index: -1;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+
+.gallery .review-slider{
+	padding-bottom: 2rem;
+}
+
+.gallery .box{
+	padding:2rem;
+	text-align:center;
+	box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+	border-radius: .5rem;
+}
+
+.gallery .box img{
+	height:20rem;
+	width:100%;
+	/*border-radius:50%; */
+	object-fit: cover;
+	margin-bottom:1rem;
+	
+}
+
+.gallery .box h3{
+	color:#333;
+	font-size: 2.5rem;
+}
+
+.gallery .box p{
+	color:#666;
+	font-size: 1.5rem;
+	padding: 1rem 0;
+}
+
+.gallery .box .stars i{
+	color:var(--orange);
+	font-size: 1.7rem;
+}
+
+
+
+
+.footer{
+	background:#333;
+	
+}
+
+.footer .box-container{
+	display: flex;
+	flex-wrap: wrap;gap:1.5rem;
+	text-align:center;
+}
+
+.footer .box-container .box{
+	padding:1rem 0;
+	flex: 1 1 25rem;
+}
+
+.footer .box-container .box h3{
+	font-size: 2.5rem;
+	padding:.7rem 0;
+	color:#fff;
+}
+
+.footer .box-container .box p{
+	font-size: 1.5rem;
+	padding:.7rem 0;
+	color:#eee;
+}
+
+.footer .box-container .box a{
+	display: block;
+	font-size: 1.5rem;
+	padding:.7rem 0;
+	color:#eee;
+}
+
+.footer .box-container .box a:hover{
+	color:var(--orange);
+	text-decoration:underline;
+}
+
+.footer .credit{
+	text-align: center;
+	padding:2rem 1rem;
+	margin-top: 1rem;
+	font-size: 2rem;
+	font-weight: normal;
+	color:#fff;
+	border-top: .1rem solid rgba(255,255,255,.2);
+}
+
+.footer .credit span{
+	color:var(--orange);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*media queries */
+@media (max-width: 1200px){
+	
+	html{
+	  font-size: 55%;
+	}
+}
+
+@media (max-width: 991px){
+	header{
+	padding:2rem;
+	}
+	
+	section{
+	padding:2rem;
+	}
+}
+
+@media(max-width:450px){
+	
+	html{
+	font-size: 50%;
+	}
+	
+}
